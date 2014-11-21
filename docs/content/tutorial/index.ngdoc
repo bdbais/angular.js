@@ -82,6 +82,11 @@ This command creates the `angular-phonecat` directory in your current directory.
 download much smaller and faster.
 </div>
 
+<div class="alert alert-info">If you are under proxy, like in mostly corporate companies, you must to put http proxy address
+on your command. like this
+git clone --depth=14 https://github.com/angular/angular-phonecat.git -c http.proxy='http://user:password@proxy.company.com:8080'
+</div>
+
 Change your current directory to `angular-phonecat`.
 
 ```
