@@ -1319,10 +1319,17 @@ function toJson(obj, pretty) {
  * @param {string} json JSON string to deserialize.
  * @returns {Object|Array|string|number} Deserialized JSON string.
  */
-function fromJson(json) {
-  return isString(json)
-      ? JSON.parse(json)
-      : json;
+function fromJson(json, error) {
+    try {
+        return isString(json)
+              ? JSON.parse(json)
+              : json;
+    } catch (e) {
+        error();
+        return {};
+    }
+  
+  
 }
 
 
